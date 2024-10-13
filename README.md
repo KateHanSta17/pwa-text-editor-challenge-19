@@ -1,5 +1,114 @@
 # 19 Progressive Web Applications (PWA): Text Editor
+## GitHub Repo
+- [pwa-text-editor-challenge-19](https://github.com/KateHanSta17/pwa-text-editor-challenge-19)
 
+## Render Deployment URL
+- [placeholder](placeholder)
+
+----
+
+## Just Another Text Editor (J.A.T.E)
+
+### Description
+Just Another Text Editor (J.A.T.E) is a Progressive Web Application (PWA) that allows users to create and save text files both online and offline. This text editor is built with modern web technologies and meets the PWA criteria, enabling users to install it as a standalone application. J.A.T.E provides seamless user experiences with support for data persistence via IndexedDB and offline usage thanks to service workers. It is designed as a lightweight, code-friendly text editor with syntax highlighting and auto-save features.
+
+### Table of Contents
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [License](#license)
+- [Contact](#contact)
+
+### Installation
+To install and run J.A.T.E locally, follow these steps:
+
+1. Clone the repository to your local machine:
+
+``` md
+git clone https://github.com/your-username/jate.git 
+```
+
+2. Navigate to the project directory:
+
+``` md 
+cd jate 
+```
+
+3. Install dependencies:
+
+``` md 
+npm install 
+```
+
+4. To start the development server, run:
+
+``` md 
+npm run dev 
+```
+
+5. To build the project for production, run:
+
+``` md 
+npm run build 
+```
+
+6. To run the project in production mode, use:
+
+``` md 
+npm run start 
+```
+
+### Usage
+After installation, you can interact with the J.A.T.E by opening the application in your browser or installing it as a PWA.
+
+#### Key Commands:
+- Run the application locally: 
+``` md 
+npm run dev 
+```
+- Build the application: 
+``` md
+ npm run build 
+ ```
+- Start the production server: 
+``` md 
+npm run start 
+```
+
+#### Example Use Case:
+- Type content into the editor and it will be automatically saved into IndexedDB.
+- The content will persist even when the app is closed and reopened.
+- You can install the application by clicking the "Install" button, making it available offline.
+
+### Features
+- Offline functionality: The application can be used without an internet connection.
+- Data persistence: Uses IndexedDB to store and retrieve data.
+- PWA Install: Users can install the app on their desktop or mobile device.
+- Service workers: Caches assets for offline use.
+- Syntax highlighting: Built-in syntax highlighting for code snippets.
+- Auto-save: Automatically saves content when the editor loses focus.
+
+### Technologies Used
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- Node.js
+- Express.js
+- Webpack
+- Babel
+- Workbox (for service workers)
+- IndexedDB (via idb library)
+- CodeMirror (for syntax highlighting)
+
+### License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+### Contact
+GitHub: [KateHanSta17](https://github.com/KateHanSta17)
+
+-------------
 ## Your Task
 
 As you have progressed through this course, you have put together a number of impressive projects that you can show off to potential employers. This project is no exception; in fact, it features some of the most impressive expressions of the concepts you have learned so far.
