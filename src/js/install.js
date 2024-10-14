@@ -4,7 +4,7 @@ const butInstall = document.getElementById('buttonInstall');
 window.addEventListener('beforeinstallprompt', (event) => {
   event.preventDefault();
   window.deferredPrompt = event;
-  butInstall.classList.toggle('hidden', false);
+  butInstall.classList.toggle('hidden', false);  // Show the install button
 });
 
 butInstall.addEventListener('click', async () => {
@@ -12,11 +12,12 @@ butInstall.addEventListener('click', async () => {
   if (!promptEvent) {
     return;
   }
-  promptEvent.prompt();
-  window.deferredPrompt = null;
-  butInstall.classList.toggle('hidden', true);
+  promptEvent.prompt();  // Show the install prompt
+  window.deferredPrompt = null;  // Reset the deferred prompt after the user interacts
+  butInstall.classList.toggle('hidden', true);  // Hide the install button after installation
 });
 
-window.addEventListener('appinstalled', () => {
-  window.deferredPrompt = null;
+window.addEventListener('appinstalled', (event) => {
+  console.log('👍', 'appinstalled', event);
+  window.deferredPrompt = null;  // Clear the deferredPrompt when the app is installed
 });
