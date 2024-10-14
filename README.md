@@ -17,6 +17,7 @@ Just Another Text Editor (J.A.T.E) is a Progressive Web Application (PWA) that a
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
+- [Deployment](#deployment)
 - [Technologies Used](#technologies-used)
 - [License](#license)
 - [Contact](#contact)
@@ -89,6 +90,50 @@ npm run start
 - Service workers: Caches assets for offline use.
 - Syntax highlighting: Built-in syntax highlighting for code snippets.
 - Auto-save: Automatically saves content when the editor loses focus.
+
+### Deployment
+#### Hosting Service: 
+Render
+
+_This project is deployed using Render, a full-stack cloud application platform._
+
+#### Steps to Deploy to Render:
+1. Create a Render Account:
+Sign up for an account at Render.
+
+2. Link the GitHub Repository:
+- Navigate to the [Render](https://render.com/).
+- Click New > Web Service.
+- Link your GitHub repository for the project and select the appropriate branch (usually ``` main ``` or ``` master ```).
+
+3. Configure Build Settings:
+
+- Set the Build Command to:
+``` md 
+npm install && npm run build
+```
+- Set the Start Command to:
+``` md 
+npm run start
+```
+4. Node Version:
+
+- Ensure your app uses the correct version of Node.js. 
+_This project uses Node v22.9.0_
+- To specify the Node version, create an ``` .nvmrc ``` file in the root directory with the following content:
+``` md
+22.9.0
+```
+5. Redeploy and Monitor:
+- After configuring the settings, Render will automatically build and deploy the application.
+- Monitor the deployment logs to ensure everything is running smoothly.
+
+6. Live URL:
+
+- After the successful deployment, Render provides a live URL to access your application. The URL will be shown in the Service Details section of the Render dashboard.
+
+##### Environment Variables
+If your project requires any environment variables for configuration, you can add them via the Render dashboard under Environment settings. However, for this project, no environment variables are necessary.
 
 ### Technologies Used
 - HTML5
