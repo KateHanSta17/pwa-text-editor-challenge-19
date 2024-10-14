@@ -3,7 +3,7 @@
 - [pwa-text-editor-challenge-19](https://github.com/KateHanSta17/pwa-text-editor-challenge-19)
 
 ## Render Deployment URL
-- [placeholder](placeholder)
+- [Render URL for deployed project](https://pwa-text-editor-challenge-19-whh1.onrender.com)
 
 ----
 
