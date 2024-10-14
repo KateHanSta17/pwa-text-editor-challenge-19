@@ -1,12 +1,18 @@
 const express = require('express');
+const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000; // Use the PORT provided by Render, default to 3000
 
-app.use(express.static('../client/dist'));
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+// Serve the static files from the dist directory
+app.use(express.static(path.join(__dirname, 'dist')));
 
-require('./routes/htmlRoutes')(app);
+// For any routes, serve index.html
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
 
-app.listen(PORT, () => console.log(`Now listening on port: ${PORT}`));
+// Start the server
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
